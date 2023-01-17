@@ -1,0 +1,136 @@
+#deals{
+    @include mgap(60px,0,0,0);
+
+    .deals-head{
+        h3{
+            @include font(25px,'Poppins',600,$headcolor);
+        }
+    }
+    .deals-box-wrapper{
+        @include mgap(40px,40px,0,0);
+        display: flex;
+        flex-wrap: wrap;
+
+        .deals-item{
+            width: 20%;
+            // transition: all linear 0.3s;
+            
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5){
+                border-top: 1px solid #eee;
+                border-right: 1px solid #eee;
+                border-bottom: 1px solid #eee;
+            }
+            &:nth-child(1){
+                border-left: 1px solid #eee;
+                border-top: 1px solid #eee;
+                border-right: 1px solid #eee;
+                border-bottom: 1px solid #eee;
+            }
+
+            &:hover{
+                box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+            }
+
+            .deals-img{
+                img{
+                    transition: all linear 0.3s;
+                }
+                img{
+                    &:last-child{
+                        display: none;
+                    }
+                }
+
+
+                &:hover{
+                    
+                    img{
+                        &:first-child{
+                        display: none;
+                    }
+                        &:last-child{
+                            display: block;
+                        }
+                    }
+                    
+                }
+            }
+            
+
+            // text part
+            .deals-text{
+                @include pgap(51px,22px,15px,15px);
+                text-align: center;
+                h5{
+                    a{
+                        @include font(16px,'Poppins',500,$headcolor);
+                        text-transform: capitalize;
+                        transition: all linear 0.3s;
+                        &:hover{
+                            color: $boldcolor;
+                        }
+                    }
+                }
+
+                i {
+                    color: #dedede;
+                    font-size: 16px;
+                    @include mgap(11px,13px,0,0);
+                }
+                
+                p{
+                    @include font(18px,'Poppins',600,$headcolor);
+                    span{
+                        @include font(18px,'Poppins',600,#aaa);
+                    }
+                }
+
+            }
+
+            position: relative;
+
+            .deals-icons{
+                position: absolute;
+                top: 20px;
+                right: 12px;
+                display: none;
+                transition: all linear 0.3s;
+                
+                a{
+                    display: inherit;
+                    width: 36px;
+                    height: 36px;
+                    border: 1px solid #eee;
+                    border-radius: 50%;
+                    color: $shopcolor;
+                    font-size: 14px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include mgap(0,8px,0,0);
+                    transition: all linear 0.3s;
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+
+                    &:hover{
+                        color: #fff;
+                        border-color: transparent;
+                        background-color: #FF933B;
+                    }
+                }
+            }
+
+            &:hover{
+                .deals-icons{
+                    display: block;
+                }
+            }
+        }
+       
+    }
+}

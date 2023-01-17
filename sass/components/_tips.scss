@@ -1,0 +1,28 @@
+#tips{
+    @include mgap(19px,61px,0,0);
+    .tips-wrapper{
+        background-color: $bordcolor;
+        @include pgap(19px,19px,30px,30px);
+        display: flex;
+
+        .tips-item{
+            width: 180px;
+            background-color: $bgcolor;
+            @include pgap(20px,20px,30px,30px);
+            @include mgap(0,0,0,10px);
+            text-align: center;
+            &:last-child{
+                margin-right: 0;
+            }
+            a h6{
+                @include font(17px,'Poppins',600,$headcolor);
+                text-transform: capitalize;
+                text-align: center;
+                transition: all linear 0.3s;
+                &:hover{
+                    color: $boldcolor;
+                }
+            }
+        }
+    }
+}

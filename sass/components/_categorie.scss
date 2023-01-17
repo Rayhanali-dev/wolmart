@@ -1,0 +1,52 @@
+#categories{
+    @include mgap(0,57px,0,0);
+    .categorie-header{
+        h3{
+            text-align: center;
+            @include font(28px,'Poppins',600,$headcolor);
+            text-transform: capitalize;
+            line-height: 2;
+            @include mgap(45px, 45px, 0, 0);
+        }
+    }
+    .categories-wrapper{
+        // justify-content: space-around;
+        justify-content: space-between;
+        // justify-content: space-evenly;
+        flex-wrap: wrap;
+        .categories-item{
+            // margin-right: 10px;
+            .categories-img{
+            width: 248px;
+            height: 188px;
+            border-radius: 5px;
+            overflow: hidden;
+            img{
+                transition: all linear 0.3s;
+            }
+
+            &:hover{
+                img{
+                    transform: scale(1.08);
+                }
+                
+            }
+            }
+
+            .categories-text{
+                text-align: center;
+                @include mgap(22px,22px,0,0);
+                h4{
+                    @include font(15px,'Poppins',600,$gapcolor);
+                    @include mgap(0,10px,0,0);
+                    text-transform: capitalize;
+                }
+                p{
+                    @include font(14px,'Poppins',400,$paracolor);
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+    }
+}

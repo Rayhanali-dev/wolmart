@@ -1,0 +1,429 @@
+/*===========================================
+| | | | | | banner part css start   | | | |
+=============================================*/
+#banner {
+  background-color: $bannerbg;
+  padding-bottom: 40px;
+  .banner-top {
+    @include pgap(30px, 30px, 0, 0);
+    .banner-top-wrapper {
+      justify-content: space-between;
+      padding-left: 35px;
+      .banner-top-item {
+        width: 165px;
+        align-items: center;
+        position: relative;
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 1px;
+          height: 20px;
+          top: 50%;
+          right: 20px;
+          background-color: #33333326;
+          transform: translate(-50%, -50%);
+        }
+        &:last-child {
+          &::after {
+            display: none;
+          }
+        }
+        svg {
+          color: $menu-li;
+          font-size: 30px;
+          transition: all linear 0.3s;
+        }
+        h4 {
+          @include font(14px, "Poppins", 400, $menu-li);
+          line-height: 22px;
+          padding-left: 15px;
+          text-transform: capitalize;
+          transition: all linear 0.3s;
+          padding-right: 20px;
+        }
+        &:hover {
+          svg {
+            color: $header-hover-color;
+          }
+          h4 {
+            color: $header-hover-color;
+          }
+        }
+      }
+    }
+  }
+  .banner-slider {
+    .banner-slider-main {
+      position: relative;
+      .banner-slider-wrapper {
+        .banner-slide-item1 {
+          background: url(../images/banner-slide1.jpg) no-repeat center/cover;
+          @include pgap(150px, 150px, 0, 0);
+          border-radius: 5px;
+          .banner-slide-content {
+            h3 {
+              @include font(40px, "Poppins", 700, $menu-li);
+              text-transform: uppercase;
+              line-height: 50px;
+              margin-bottom: 15px;
+              span {
+                color: $header-hover-color;
+                font-size: 50px;
+                font-weight: 700;
+                text-transform: capitalize;
+              }
+            }
+            p {
+              @include font(20px, "Poppins", 400, $nav-li);
+              line-height: 30px;
+              margin-bottom: 20px;
+            }
+            .banner-slide-link {
+              align-items: center;
+              a {
+                display: inline-block;
+                @include font(16px, "Poppins", 400, $normal);
+                padding: 15px 30px;
+                border-color: $menu-li;
+                background-color: $menu-li;
+                text-transform: uppercase;
+                transition: all linear 0.3s;
+                svg {
+                  padding-left: 10px;
+                  font-size: 16px;
+                }
+                &:hover {
+                  background-color: #454545;
+                }
+              }
+              h4 {
+                @include font(35px, "Poppins", 700, $menu-li);
+               sup {
+                  @include font(17px, "Poppins", 400, $nav-li);
+                  margin-left: 18px;
+                  margin-right: 4px;
+                }
+              }
+            }
+          }
+        }
+        .banner-slide-item2 {
+          background: url(../images/banner-slide2.jpg) no-repeat center/cover;
+          @include pgap(150px, 150px, 0, 0);
+          border-radius: 5px;
+          .banner-slide-content {
+            h3 {
+              @include font(40px, "Poppins", 700, $menu-li);
+              text-transform: capitalize;
+              line-height: 50px;
+              margin-bottom: 15px;
+              span {
+                color: $header-hover-color;
+                font-size: 40px;
+                font-weight: 700;
+                text-transform: capitalize;
+              }
+            }
+            h6 {
+              @include font(22px, "Poppins", 600, $menu-li);
+              line-height: 30px;
+              margin-bottom: 15px;
+              text-transform: uppercase;
+            }
+            .banner-slide-link {
+              align-items: center;
+              a {
+                display: inline-block;
+                @include font(16px, "Poppins", 400, $menu-li);
+                padding: 15px 30px;
+                border: 4px solid $menu-li;
+                border-radius: 5px;
+                background-color: transparent;
+                text-transform: uppercase;
+                transition: all linear 0.3s;
+                svg {
+                  padding-left: 10px;
+                  font-size: 16px;
+                  transition: all linear 0.3s;
+                }
+                &:hover {
+                  background-color: $menu-li;
+                  color: $normal;
+                  svg {
+                    color: $normal;
+                  }
+                }
+              }
+              h4 {
+                @include font(35px, "Poppins", 700, $menu-li);
+                padding-right: 15px;
+               sup {
+                  @include font(17px, "Poppins", 400, $nav-li);
+                  margin-left: 18px;
+                  margin-right: 4px;
+                }
+              }
+            }
+          }
+        }
+        .banner-slide-item3 {
+          background: url(../images/banner-slide3.jpg) no-repeat center/cover;
+          @include pgap(120px, 120px, 0, 0);
+          border-radius: 5px;
+          .banner-slide-content {
+            h3 {
+              @include font(40px, "Poppins", 700, $menu-li);
+              text-transform: capitalize;
+              line-height: 50px;
+              margin-bottom: 15px;
+              span {
+                color: $header-hover-color;
+                font-size: 40px;
+                font-weight: 700;
+                text-transform: capitalize;
+              }
+            }
+            h6 {
+              @include font(22px, "Poppins", 400, $menu-li);
+              line-height: 30px;
+              margin-bottom: 15px;
+              text-transform: uppercase;
+            }
+            p {
+              @include font(20px, "Poppins", 400, $nav-li);
+              line-height: 30px;
+              margin-bottom: 20px;
+            }
+            .banner-slide-link {
+              align-items: center;
+              a {
+                display: inline-block;
+                @include font(16px, "Poppins", 400, $menu-li);
+                padding: 15px 30px;
+                border-radius: 5px;
+                border: 4px solid $menu-li;
+                background-color: transparent;
+                text-transform: uppercase;
+                transition: all linear 0.3s;
+                svg {
+                  padding-left: 10px;
+                  font-size: 16px;
+                  transition: all linear 0.3s;
+                }
+                &:hover {
+                  background-color: #454545;
+                  color: $normal;
+                  svg {
+                    color: $normal;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .banner-prev-icon {
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+        opacity: 0;
+        visibility: hidden;
+        transition: all linear 0.3s;
+        svg {
+          font-size: 50px;
+          color: #cacaca;
+        }
+      }
+      .banner-next-icon {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+        opacity: 0;
+        visibility: hidden;
+        transition: all linear 0.3s;
+        svg {
+          font-size: 50px;
+          color: #cacaca;
+        }
+      }
+      &:hover {
+        .banner-prev-icon {
+          opacity: 1;
+          visibility: visible;
+        }
+        .banner-next-icon {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  .banner-content {
+    @include pgap(40px, 60px, 0, 0);
+    .banner-content-item {
+      border-radius: 10px;
+      position: relative;
+      height: 260px;
+      width: 100%;
+      overflow: hidden;
+      &:hover {
+        img {
+          transform: scale(1.1);
+          height: 260px;
+        }
+      }
+      img {
+        display: block;
+        border-radius: 10px;
+        height: 260px;
+        width: 100%;
+        object-fit: cover;
+        transition: all linear 0.3s;
+      }
+      .banner-content-text {
+        position: absolute;
+        left: 29px;
+        top: 50%;
+        transform: translateY(-50%);
+        h5 {
+          @include font(15px, "Poppins", 400, $header-hover-color);
+          letter-spacing: 0.35px;
+          text-transform: uppercase;
+          span {
+            color: #333;
+          }
+        }
+        h3 {
+          @include font(25px, "Poppins", 400, #cacaca);
+          margin: 8px 0px 10px 0px;
+          line-height: 30px;
+          text-transform: capitalize;
+          padding-right: 156px;
+          span {
+            font-weight: 700;
+            color: $normal;
+          }
+        }
+        a {
+          display: inline-block;
+          @include font(15px, "Poppins", 700, $normal);
+          text-transform: uppercase;
+          transition: all linear 0.3s;
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            height: 4px;
+            width: 0;
+            background-color: $normalbg;
+            opacity: 0;
+            margin-left: auto;
+            margin-right: auto;
+            transform-origin: center;
+            transition: all linear 0.3s;
+          }
+          &:hover {
+            &::after {
+              opacity: 1;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .banner-content-item2 {
+      .banner-content-text {
+        h3 {
+          color: $nav-li;
+          span {
+            color: $menu-li;
+          }
+        }
+        a {
+          color: $menu-li;
+          &::after {
+            background-color: $menu-li;
+          }
+        }
+      }
+    }
+  }
+  .banner-bottom {
+    .banner-bottom-item {
+      .banner-bottom-icon {
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+        background-color: #202e3c14;
+        text-align: center;
+        line-height: 66px;
+        margin-right: 10px;
+        svg {
+          color: #000;
+          font-size: 25px;
+        }
+      }
+      .banner-bottom-text {
+        margin-top: -10px;
+        h3 {
+          @include font(16px, "Poppins", 600, $menu-li);
+          line-height: 33px;
+          text-transform: capitalize;
+        }
+        h5 {
+          @include font(14px, "Poppins", 400, $menu-li);
+        }
+      }
+    }
+  }
+}
+// banner slider dot start
+.slick-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  li {
+    display: inline-block;
+    margin: 0 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #a1a1a1;
+    border-color: #a1a1a1;
+    transition: all linear 0.3s;
+    button {
+      color: transparent;
+      width: 30px;
+      height: 15px;
+      border-radius: 30px;
+      background-color: $menu-li;
+      border-color: $menu-li;
+      border: none;
+      opacity: 0;
+      transition: all linear 0.3s;
+    }
+  }
+}
+
+.slick-dots li.slick-active {
+  width: 30px;
+  height: 15px;
+  border-radius: 30px;
+}
+.slick-dots li.slick-active button {
+  opacity: 1;
+}
+// banner slider dot end
+/*===========================================
+| | | | | | banner part css end   | | | |
+=============================================*/

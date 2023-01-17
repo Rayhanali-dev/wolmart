@@ -1,0 +1,248 @@
+/* ============================================
+            FASHION CSS PART START
+==============================================*/
+#fashion {
+    @include pgap(60px, 52px, 0, 0);
+    background-color: $sectionbackgroundcolor;
+    .fashion-top {
+        background-color: #fff;
+        border-right: 1px solid #eee;
+        &:nth-last-of-type(1) {
+            border-right: none;
+        }
+        .accessories-left {
+            // border-right: 1px solid #CCCCCC;
+            .accessories-top {
+                @include pgap(28px, 1px, 41px, 39px);
+                .accessories-heading {
+                    h3 {
+                        @include font(20px, 'Poppins', 400, $fashionheadingcolor);
+                        @include mgap(0, 30px, 0, 0);
+                    }
+                }
+                .accessories-banner {
+                    position: relative;
+                    img {
+                        border-radius: 5px;
+                    }
+                    .accessories-banner-text {
+                        position: absolute;
+                        top: 50%;
+                        left: 30px;
+                        transform: translateY(-50%);
+                        h3 {
+                            @include font(25px, 'Poppins', 400, $fashiontextcolor);
+                            text-transform: uppercase;
+                            @include mgap(0, 15px, 0, 0);
+                        }
+                        h2 {
+                            @include font(30px, 'Poppins', 400, $textnormalcolor);
+                            @include mgap(0, 35px, 0, 0);
+                            position: relative;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                bottom: -22px;
+                                left: 0;
+                                width: 40px;
+                                height: 3px;
+                                background-color: #EEEEEE66;
+                            }
+                        }
+                        h4 {
+                            @include font(16px, 'Poppins', 400, $fashiontextcolor);
+                            span {
+                                @include font(20px, 'Poppins', 700, $navcolor);
+                            }
+                        }
+                    }
+                }
+            }
+            .accessories-middle {
+                @include pgap(20px, 16px, 39px, 0);
+                .accessories-middle-heading {
+                    h3 {
+                        @include font(20px, 'Poppins', 400, $fashionheadingcolor);
+                        @include mgap(0, 15px, 0, 0);
+                    }
+                }
+                .accessories-middle-left-item {
+                    ul {
+                        li {
+                            a {
+                                @include font(13px, 'Poppins', 400, $fashionleftmenucolor);
+                                line-height: 32px;
+                                transition: all linear .3s;
+                                i {
+                                    font-size: 13px;
+                                }
+                                &:hover {
+                                    color: #FF933B;
+                                }
+                            }
+                            .middle-left-arrow {
+                                @include font(15px, 'Poppins', 400, $fashionheadingcolor);
+                            }
+                        }
+                    }
+                }
+            }
+            .accessories-bottom {
+                .accessories-bottom-item {
+                    .accessories-item {
+                        .accessories-img {
+                            position: relative;
+                            transition: all linear .3s;
+                            .accessories-second-img {
+                                display: none;
+                            }
+                            .accessories-icon {
+                                position: absolute;
+                                top: 20px;
+                                right: 15px;
+                                opacity: 0;
+                                transition: all linear .2s;
+                                a {
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 50%;
+                                    border: 1px solid $fashiontextcolor;
+                                    text-align: center;
+                                    display: block;
+                                    @include mgap(0px, 5px, 0, 0);
+                                    background-color: $normalcolor;
+                                    transition: all linear .3s;
+                                    i {
+                                        line-height: 40px;
+                                        color: #999;
+                                    }
+                                    &:hover {
+                                        background-color: $primarybackgroud;
+                                        border: 1px solid $primarybackgroud;
+                                        i {
+                                            color: $textnormalcolor;
+                                        }
+                                    }
+                                }
+                            }
+                            &:hover {
+                                .accessories-first-img {
+                                    display: none;
+                                }
+                                .accessories-second-img {
+                                    display: block;
+                                }
+                            }
+                        }
+                        .accessories-item-content {
+                            h4 {
+                                @include mgap(30px, 0, 0, 0);
+                                a {
+                                    @include mgap(0, 0px, 0, 0);
+                                    @include font(14px, 'Poppins', 400, $fashionheadingcolor);
+                                    transition: all linear .3s;
+                                    &:hover {
+                                        color: #FF933B;
+                                    }
+                                }
+                            }
+                            a {
+                                @include font(13px, 'Poppins', 400, #CCCCCC);
+                                @include mgap(0, 10px, 0, 0);
+                            }
+                            h5 {
+                                @include font(14px,  'Poppins', 600, $fashionheadingcolor);
+                                @include pgap(0px, 30px, 0, 0);
+                            }
+                        }
+                        
+                        &:hover {
+                            .accessories-icon {
+                                opacity: 1;
+                            }
+                            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+                        }
+                    }
+                    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                        border-top: 1px solid #eee;
+                        border-right: 1px solid #eee; 
+                    }
+                    &:nth-child(4) {
+                        border-top: 1px solid #eee;
+                    }
+                }
+            }
+        }
+        .accessories-right {
+            @include pgap(28px, 1px, 41px, 39px);
+            .accessories-right-heading {
+                h3 {
+                    @include font(20px, 'Poppins', 400, $fashionheadingcolor);
+                    @include mgap(0, 30px, 0, 0);
+                }
+            }
+            .accessories-right-content {
+                h4 {
+                    @include font(13px, 'Poppins', 400, $fashionheadingcolor);
+                }
+                a {
+                    i {
+                        color: #202E3C;
+                        font-size: 12px;
+                        @include mgap(0px, 8px, 0, 0);
+                    }
+                }
+                h3 {
+                    @include font(16px, 'Poppins', 500, $fashionheadingcolor);
+                    span {
+                        position: relative;
+                        color: #AAA;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background-color: #AAA;
+                            transform: translateY(-50%)
+                        }
+                    }
+                }
+            }
+            .accessories-right-img {
+                @include mgap(0, 15px, 0, 0);
+                .accessories-right-second-img {
+                    display: none;
+                }
+                &:hover {
+                    .accessories-right-second-img {
+                        display: block;
+                    }
+                    .accessories-right-first-img {
+                        display: none;
+                    }
+                }
+            }
+            .accessories-right-item {
+                ul {
+                    li {
+                        a {
+                            @include font(16px, 'Poppins', 600, $fashionheadingcolor);
+                            transition: all linear .3s;
+                            i {
+                                font-size: 14px;
+                            }
+                            &:hover {
+                                color: #FF933B;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* ============================================
+            FASHION CSS PART END
+==============================================*/

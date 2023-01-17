@@ -1,0 +1,38 @@
+/* ============================================
+            DOWNLOAD CSS PART START
+==============================================*/
+#download {
+    @include pgap(0px, 52px, 0, 0);
+    background-color: $sectionbackgroundcolor;
+    .mobile-phone {
+        background-color: $mobilebackground;
+        border-radius: 5px;
+        @include pgap(15px, 15px, 0, 0);
+        .download-content {
+            @include mgap(0, 0, 119px, 0);
+            h3 {
+                @include font(19px, 'Poppins', 400, $fashiontextcolor);
+                i {
+                    @include pgap(0px, 0px, 0, 10px);
+                }
+            }
+        }
+        .download-button {
+            a {
+                @include pgap(8px, 8px, 15px, 15px);
+                border: 1px solid $fashiontextcolor;
+                @include font(16px, 'Poppins', 500, $fashiontextcolor);
+                @include mgap(0, 0, 40px, 0);
+                transition: all linear .3s;
+                border-radius: 3px;
+                &:hover {
+                    @include font(16px, 'Poppins', 500, $navcolor);
+                    background-color: $backgroundnormalcolor;
+                }
+            }
+        }
+    }
+}
+/* ============================================
+            DOWNLOAD CSS PART END
+==============================================*/

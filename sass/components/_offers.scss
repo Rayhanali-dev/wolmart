@@ -1,0 +1,84 @@
+#offers{
+    .offers-banner{
+        background: url(../images/offers.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0.3s;
+        @include pgap(37px,32px,99px,89px);
+        
+        .offers-banner-item{
+            .text-left{
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 2px;
+                    height: 76px;
+                    background-color: #414C59;
+                    top: 0;
+                    left: 166px;
+                }
+                p{
+                    @include font(86px,'Poppins',700,$boldcolor);
+                    position: relative;
+                    span{
+                        @include font(40px,'Poppins',400,$boldcolor);
+                        position: absolute;
+                        top: 2px;
+                        left: 110px;
+        
+                        &:last-child{
+                            top: 40px;
+                            font-size: 27px;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+               }
+
+               .text-right{
+                @include mgap(0,0,83px,0);
+                h4{
+                    @include font(25px,'Poppins',600,$headingcolor);
+                    @include mgap(3px,0,0,0);
+                }
+                h6{
+                    @include font(17px,'Poppins',400,$textcolor);
+                    line-height: 17px;
+                    @include mgap(25px,0,0,0);
+                    
+                    span{
+                        @include font(21px,'Poppins',600,$headcolor);
+                        background-color: $bgcolor;
+                        @include pgap(2px,3px,8px,7px);
+                    }
+                }
+                
+            }
+
+            position: relative;
+
+            a{
+                @include font(16px,'Poppins',600,$bortextcolor);
+                border: 3px solid #FFFFFF99;
+                border-radius: 3px;
+                @include pgap(15px,16px,29px,29px);
+                text-transform: capitalize;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                transition: all linear 0.3s;
+
+                &:hover{
+                    background-color: #fff;
+                    color: $boldcolor;
+                    border-color: transparent;
+                }
+            }
+        }
+
+        }
+    }
+
